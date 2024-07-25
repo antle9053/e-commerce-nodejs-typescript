@@ -1,9 +1,10 @@
 import { app } from "./src/app";
+import { configs } from "./src/configs";
 
-const PORT = process.env.PORT || 4100;
+const { port } = configs;
 
-const server = app.listen(PORT, () => {
-  console.log("Listening on port " + PORT);
+const server = app.listen(port, () => {
+  console.log("Listening on port " + port);
 });
 
 process.on("SIGINT", () => {
